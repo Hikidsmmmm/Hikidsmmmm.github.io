@@ -1,0 +1,78 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Locks sidebar to the left side of the window */
+#sidebar {
+  width: 250px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: #2c3e50;
+  padding: 20px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+}
+
+#sidebar li {
+  margin-bottom: 15px;
+}
+
+#sidebar a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+
+/* Hover look and Current active tab look */
+#sidebar a:hover, #sidebar a.active {
+  background-color: #34495e;
+  border-left: 4px solid #3498db;
+}
+
+/* Pushes main content right so it doesn't hide behind the fixed sidebar */
+#main-content {
+  margin-left: 250px; 
+  padding: 40px;
+}
+
+/* Tab Content Visibility Rules */
+.tab-content {
+  display: none; /* Hides the tab by default */
+}
+
+.tab-content.active {
+  display: block; /* Shows the tab only when it has the 'active' class */
+}
+
+/* Home Buttons Styling */
+button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #2980b9;
+}

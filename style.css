@@ -76,3 +76,13 @@ button {
 button:hover {
   background-color: #2980b9;
 }
+
+/* 2. Target ANY content layout div that sits next to the sidebar */
+#sidebar ~ div,
+#sidebar ~ main,
+body > div:nth-of-type(2) {
+  margin-left: 250px !important; /* Forces the content out from under the sidebar */
+  padding: 40px;
+  width: calc(100% - 250px);
+  display: block;
+}
